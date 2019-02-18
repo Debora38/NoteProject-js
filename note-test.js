@@ -9,9 +9,7 @@
   function print() {
     var note = new Note();
 
-    if (note.print() !== "My favourite language is JavaScript") {
-      throw new Error("text of function print does not match");
-    }
+    assert.isTrue(note.print() === "My favourite language is JavaScript")
   };
   print();
 
