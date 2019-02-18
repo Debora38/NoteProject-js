@@ -2,9 +2,7 @@
   function testNoteText() {
     var note = new Note();
 
-    asserts.isTrue (note.text !== "My favourite language is JavaScript") {
-      throw new Error("text does not match");
-    }
+    assert.isTrue(note.text === "My favourite language is JavaScript")
   };
   testNoteText();
 
