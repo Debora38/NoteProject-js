@@ -8,7 +8,7 @@
   NoteListView.prototype.printTitles = function() {
     var titles = ""
     for (var i in this.notelist.note_list) {
-      titles += "<li><div>" + this.notelist.note_list[i].text + "</div></li>";
+      titles += "<div><li>" + this.notelist.note_list[i].text + "</li></div>";
     }
     return titles
   }
