@@ -10,5 +10,9 @@ NoteList.prototype.printList = function() {
 };
 
 
+NoteList.prototype.create = function(note) {
+  this.note_list.push(note)
+};
+
   exports.NoteList = NoteList;
 })(this);
