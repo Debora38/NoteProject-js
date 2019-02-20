@@ -13,5 +13,5 @@
     return titles + "</ul>"
   }
 
-exports.NoteListView = NoteListView;
+  exports.NoteListView = NoteListView;
 })(this);
