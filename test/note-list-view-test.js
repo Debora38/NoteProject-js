@@ -5,7 +5,6 @@
     var noteListView = new NoteListView();
     noteListView.notelist.note_list.push(new Note("Favourite food: pesto"))
     noteListView.notelist.note_list.push(new Note("Favourite drink: seltzer"))
-    console.log(noteListView.printTitles())
     assert.isTrue(noteListView.printTitles() === "<ul><div><li>Favourite food: pesto</li></div><div><li>Favourite drink: seltzer</li></div></ul>")
     console.log("TestPrintTitle is passing")
   }
