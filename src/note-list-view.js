@@ -11,7 +11,7 @@
       titles += "<div><li>" + this.notelist.all[i].text + "</li></div>";
     }
     return titles + "</ul>"
-  }
+  };
 
   exports.NoteListView = NoteListView;
 })(this);
