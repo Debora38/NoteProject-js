@@ -11,7 +11,13 @@
 
   function TestHTMLlist(){
     var noteController = new NoteController();
-    assert.isTrue(noteController.notelistview.printTitles() === "<ul><div><li>Favourite drink: seltzer</li></div></ul>")
+
+    noteController.HTML = function(){
+      var doc = document.createElement('app')
+      doc.innerHTML = "<div id='app'>hello</div>"
+      return doc
+    }
+    assert.isTrue(noteController.changeNote() === "<ul><div><li>Favourite drink: seltzer</li></div></ul>")
     console.log("TestHTMLlist is passing")
   }
 

@@ -7,11 +7,12 @@
   }
 
   NoteController.prototype.changeNote = function(){
-    document.getElementById('app').innerHTML = this.notelistview.printTitles()
+    return this.HTML().innerHTML = this.notelistview.printTitles()
+  }
+
+  NoteController.prototype.HTML = function(){
+    return document.getElementById('app')
   }
 
   exports.NoteController = NoteController
 })(this);
-
-var notecontroller = new NoteController();
-notecontroller.changeNote();
