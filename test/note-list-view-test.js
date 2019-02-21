@@ -1,19 +1,19 @@
 "use strict";
 
 (function(exports){
-  function TestPrintTitle() {
+  function TestPrintTwentyChar() {
     var noteListView = new NoteListView();
     noteListView.notelist.all.push(new Note("Favourite food: pesto"))
     noteListView.notelist.all.push(new Note("Favourite drink: seltzer"))
-    assert.isTrue(noteListView.printTitles() === "<ul><div><li>Favourite food: pesto</li></div><div><li>Favourite drink: seltzer</li></div></ul>")
-    console.log("TestPrintTitle is passing")
+    assert.isTrue(noteListView.printTwentyChar() === "<ul><div><li>Favourite food: pest</li></div><div><li>Favourite drink: sel</li></div></ul>")
+    console.log("TestPrintTwentyChar is passing")
   }
 
-  TestPrintTitle();
+  TestPrintTwentyChar();
 
   function TestPrintWithoutTitle() {
     var noteListView = new NoteListView();
-    assert.isTrue(noteListView.printTitles() === "<ul></ul>")
+    assert.isTrue(noteListView.printTwentyChar() === "<ul></ul>")
     console.log("TestPrintWithoutTitle is passing")
   }
 

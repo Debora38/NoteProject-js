@@ -7,7 +7,7 @@
   }
 
   NoteController.prototype.changeNote = function(){
-    return this.HTML().innerHTML = this.notelistview.printTitles()
+    return this.HTML().innerHTML = this.notelistview.printTwentyChar()
   }
 
   NoteController.prototype.HTML = function(){
