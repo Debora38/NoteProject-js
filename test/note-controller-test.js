@@ -3,7 +3,7 @@
 (function(exports){
   function TestNoteController(){
     var noteController = new NoteController();
-    assert.isTrue(noteController !== 'undefined')
+    assert.isTrue(noteController instanceof NoteController)
     console.log("TestNoteController is passing")
   }
 
