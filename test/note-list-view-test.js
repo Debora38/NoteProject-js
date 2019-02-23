@@ -2,17 +2,19 @@
 
 (function(exports){
   function TestPrintTwentyChar() {
-    var noteListView = new NoteListView();
+    var notelist = new NoteList();
+    var noteListView = new NoteListView(notelist);
     noteListView.list.all.push(new Note("Favourite food: pesto"))
     noteListView.list.all.push(new Note("Favourite drink: seltzer"))
-    assert.isTrue(noteListView.printTwentyChar() === "<ul><div id='0'><li><a href='#notes/0'>Favourite food: pest</a></li></div><div id='1'><li><a href='#notes/1'>Favourite drink: sel</a></li></div></ul>")
+    assert.isTrue(noteListView.printTwentyChar() === "<ul><div><li><a href='#notes/4'>Favourite food: pest</a></li></div><div><li><a href='#notes/5'>Favourite drink: sel</a></li></div></ul>")
     console.log("TestPrintTwentyChar is passing")
   }
 
   TestPrintTwentyChar();
 
   function TestPrintWithoutTitle() {
-    var noteListView = new NoteListView();
+    var notelist = new NoteList();
+    var noteListView = new NoteListView(notelist);
     assert.isTrue(noteListView.printTwentyChar() === "<ul></ul>")
     console.log("TestPrintWithoutTitle is passing")
   }
