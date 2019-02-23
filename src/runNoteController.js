@@ -1,6 +1,6 @@
 var notecontroller = new NoteController();
-notecontroller.view.notelist.create('Favourite drink: seltzer')
-notecontroller.view.notelist.create('Another note')
+notecontroller.view.list.create('Favourite drink: seltzer')
+notecontroller.view.list.create('Another note')
 notecontroller.enterList('app');
 
 notecontroller.makeUrlShowSingleNote();
