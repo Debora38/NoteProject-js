@@ -5,7 +5,7 @@
     var noteListView = new NoteListView();
     noteListView.notelist.all.push(new Note("Favourite food: pesto"))
     noteListView.notelist.all.push(new Note("Favourite drink: seltzer"))
-    assert.isTrue(noteListView.printTwentyChar() === "<ul><div><li>Favourite food: pest</li></div><div><li>Favourite drink: sel</li></div></ul>")
+    assert.isTrue(noteListView.printTwentyChar() === "<ul><div id='0'><li>Favourite food: pest</li></div><div id='1'><li>Favourite drink: sel</li></div></ul>")
     console.log("TestPrintTwentyChar is passing")
   }
 
