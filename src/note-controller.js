@@ -1,8 +1,8 @@
 "use strict";
 
 (function(exports){
-  function NoteController(){
-    this.view = new NoteListView();
+  function NoteController(list){
+    this.view = new NoteListView(list);
   }
 
   NoteController.prototype.enterList = function(id){

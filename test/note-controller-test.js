@@ -10,7 +10,8 @@
   TestNoteController();
 
   function TestHTMLlist(){
-    var noteController = new NoteController();
+    var list = new NoteList();
+    var noteController = new NoteController(list);
 
     noteController.HTML = function(){
       var doc = document.createElement('app')
@@ -18,7 +19,7 @@
       return doc
     }
     noteController.view.list.create("Favourite drink: seltzer")
-    assert.isTrue(noteController.enterList() === "<ul><div><li><a href='#notes/0'>Favourite drink: sel</a></li></div></ul>")
+    assert.isTrue(noteController.enterList() === "<ul><div><li><a href='#notes/6'>Favourite drink: sel</a></li></div></ul>")
     console.log("TestHTMLlist is passing")
   }
 
