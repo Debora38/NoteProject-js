@@ -2,16 +2,16 @@
 
 (function(exports){
   function NoteController(){
-    this.notelistview = new NoteListView();
-    this.notelistview.notelist.create('Favourite drink: seltzer')
+    this.view = new NoteListView();
+    
   }
 
-  NoteController.prototype.changeNote = function(){
-    return this.HTML().innerHTML = this.notelistview.printTwentyChar()
+  NoteController.prototype.changeNote = function(id){
+    return this.HTML(id).innerHTML = this.view.printTwentyChar()
   }
 
-  NoteController.prototype.HTML = function(){
-    return document.getElementById('app')
+  NoteController.prototype.HTML = function(id){
+    return document.getElementById(id)
   }
 
   exports.NoteController = NoteController

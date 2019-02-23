@@ -17,7 +17,8 @@
       doc.innerHTML = "<div id='app'>hello</div>"
       return doc
     }
-    assert.isTrue(noteController.changeNote() === "<ul><div><li><a href='#notes/0'>Favourite drink: sel</a></li></div></ul>")
+    noteController.view.notelist.create("Favourite drink: seltzer")
+    assert.isTrue(noteController.changeNote() === "<ul><div id='0'><li><a href='#notes/0'>Favourite drink: sel</a></li></div></ul>")
     console.log("TestHTMLlist is passing")
   }
 
