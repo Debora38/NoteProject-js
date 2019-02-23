@@ -3,10 +3,9 @@
 (function(exports){
   function NoteController(){
     this.view = new NoteListView();
-    
   }
 
-  NoteController.prototype.changeNote = function(id){
+  NoteController.prototype.enterList = function(id){
     return this.HTML(id).innerHTML = this.view.printTwentyChar()
   }
 
@@ -14,5 +13,17 @@
     return document.getElementById(id)
   }
 
+  NoteController.prototype.printSingleView = function (note){
+    var singleview = new singleNoteView(note);
+    return singleview.printSingleNoteHTML()
+  }
+
+  NoteController.prototype.locationHashChanged = function () {
+    if (location.hash === '#notes') {
+      return printSingleView(text)
+    }
+  }
+
   exports.NoteController = NoteController
+
 })(this);

@@ -9,8 +9,8 @@
   TestSingleNoteView();
 
   function TestPrintSingleNoteHTML() {
-    var singlenoteview = new singleNoteView();
-    singlenoteview.note.text = 'Favourite drink: seltzer'
+    var note = new Note("Favourite drink: seltzer")
+    var singlenoteview = new singleNoteView(note);
     assert.isTrue(singlenoteview.printSingleNoteHTML() === '<div>Favourite drink: seltzer</div>')
     console.log('TestPrintSingleNoteHTML is passing')
   }

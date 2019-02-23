@@ -1,8 +1,8 @@
 'use strict';
 
 (function(exports){
-  function singleNoteView(){
-    this.note = new Note();
+  function singleNoteView(note){
+    this.note = note
   }
 
   singleNoteView.prototype.printSingleNoteHTML = function(){
