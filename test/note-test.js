@@ -9,12 +9,12 @@
   };
   testNoteText();
 
-  function TestPrint() {
+  function TestTitle() {
     var note = new Note("My favourite language is JavaScript");
 
-    assert.isTrue(note.print() === "My favourite language is JavaScript")
-    console.log("TestPrint is passing")
+    assert.isTrue(note.title() === "My favourite languag")
+    console.log("TestTitle is passing")
   };
-  TestPrint();
+  TestTitle();
 
 })(this);
