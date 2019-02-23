@@ -18,7 +18,7 @@
       return doc
     }
     noteController.view.list.create("Favourite drink: seltzer")
-    assert.isTrue(noteController.enterList() === "<ul><div id='0'><li><a href='#notes/0'>Favourite drink: sel</a></li></div></ul>")
+    assert.isTrue(noteController.enterList() === "<ul><div><li><a href='#notes/0'>Favourite drink: sel</a></li></div></ul>")
     console.log("TestHTMLlist is passing")
   }
 
