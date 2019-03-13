@@ -80,3 +80,19 @@ So I can see all the information in the note
 ##### 3. Load the content for the single note page
 - Using TDD, update your note-controller.js to load content for the single note page. The note controller code should listen for hashchange events. When one happens, if the new browser URL is for a single note page, it should change the content of the app element to be the HTML for that note.
 - Go to http://localhost:8080 in your browser. You should be able to click on a note and see the full text of that note. There should be no page refresh.
+
+### Approach
+
+<img src="https://github.com/Debora38/NoteProject-js/blob/master/docs/images/NotesProject_model.png?raw=true">
+
+After experimenting on writing a testing framework on my own in this project: <a href="https://github.com/Debora38/NotesChallenge_TestingFramework">NotesChallenge_TestingFramework</a>, I went back to the above instructions and created the program as specified and as showed in my model.<br>
+Creating a program without existing testing framework, such as Jasmine, was interesting and made me realise how flexible and customizable it could be to create your own testing framework.
+
+### How to install
+```
+- clone locally
+- run 'http-server'
+- viit TestRunner.html in your browser
+- open the Developer tools (cmd + option + I) to see the tests pass
+- visit 'http://localhost:8080' in your browser
+```
