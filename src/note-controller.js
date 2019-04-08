@@ -1,8 +1,10 @@
 "use strict";
 
 (function(exports){
-  function NoteController(list){
+  function NoteController(list, view, singleView){
+    this.list = list;
     this.view = new NoteListView(list);
+    this.singleNoteView = singleView;
   }
 
   NoteController.prototype.enterList = function(id){
@@ -13,15 +15,11 @@
     return document.getElementById(id)
   }
 
-  NoteController.prototype.printSingleView = function (note){
-    var singleview = new singleNoteView(note);
-    return singleview.printSingleNoteHTML()
-  }
-
-  NoteController.prototype.locationHashChanged = function () {
-    if (location.hash === '#notes') {
-      return printSingleView(text)
-    }
+  NoteController.prototype.showSingleNote = function () {
+    var noteId = window.location.hash.split('#notes/')[1]
+    var note = this.list.findById(noteId)
+    var singleview = new this.singleNoteView(note)
+    document.getElementById('app').innerHTML = singleview.printSingleNoteHTML()
   }
 
   exports.NoteController = NoteController

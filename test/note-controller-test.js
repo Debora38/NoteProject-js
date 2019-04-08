@@ -19,20 +19,19 @@
       return doc
     }
     noteController.view.list.create("Favourite drink: seltzer")
-    assert.isTrue(noteController.enterList() === "<ul><div><li><a href='#notes/6'>Favourite drink: sel</a></li></div></ul>")
+    assert.isTrue(noteController.enterList() === "<ul><div><li><a href='#notes/7'>Favourite drink: sel</a></li></div></ul>")
     console.log("TestHTMLlist is passing")
   }
 
   TestHTMLlist();
 
-
-  function TestPrintSingleNote(){
-    var note = new Note("test note");
-    var noteController = new NoteController();
-    assert.isTrue(noteController.printSingleView(note) === "<div>test note</div>")
-    console.log("TestPrintSingleNote is passing")
+  function TestShowSingleNote(){
+    var list = new NoteList();
+    var noteController = new NoteController(list);
+    var singleView = new singleNoteView(note)
+    // page.visit
+    console.log(noteController.showSingleNote())
   }
-
-  TestPrintSingleNote();
+  TestShowSingleNote()
 
 })(this);
