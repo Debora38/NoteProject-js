@@ -10,4 +10,12 @@
   };
   TestCreate();
 
+  function TestFindById() {
+    var notelist = new NoteList();
+    notelist.create("test note");
+    assert.isTrue(notelist.findById(4).text === "test note")
+    console.log("TestFindById is passing")
+  }
+  TestFindById()
+
 })(this);

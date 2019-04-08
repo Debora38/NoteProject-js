@@ -10,5 +10,11 @@ NoteList.prototype.create = function(text) {
   this.all.push(note)
 };
 
+NoteList.prototype.findById = function(id) {
+  return this.all.find(function(note){
+    return note.id === id
+  })
+}
+
   exports.NoteList = NoteList;
 })(this);
